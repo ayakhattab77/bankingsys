@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="viewcustomers.css">
+        <title>View Customers</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a target="_self" href="../index.html">Home</a></li>
+                <li><a>View Customers</a></li>
+                <li><a target="_self" href="../viewtransfers/viewtransfers.html">View Transfers</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <main>
+                <table id="choosefrom">
+                    <caption>Customers List</caption>
+                    <thead>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Current Balance</th>
+                    </thead>
+                    <tbody id="tablebody">
+                    </tbody>
+                </table>
+            </main>
+            <form id="main-form">
+                <div>
+                    <div class="space">
+                        <h3>Who's the sender?</h3>
+                        <input id="id1" class="minmax unhighlighted" type="number"
+                        required
+                        placeholder="Enter the id of the sender."
+                        min=""
+                        max="">
+                        <div class="validation-messages">
+                            <span data-rule="valueMissing">ID required.</span>
+                            <span class="hide" data-rule="rangeUnderflow">You must choose a number equal to or above 1</span>
+                            <span class="hide" data-rule="rangeOverflow">You must choose a number equal to or less than 10</span>
+                        </div>
+                    </div>
+                    <div class="space">
+                        <h3>Who's the recipient?</h3>
+                        <input id="id2" class="minmax unhighlighted" type="number"
+                        required
+                        placeholder="Enter the id of the recipient."
+                        min=""
+                        max="">
+                        <div class="validation-messages">
+                            <span data-rule="valueMissing">ID required</span>
+                            <span class="hide" data-rule="rangeUnderflow">You must choose a number equal to or above 1</span>
+                            <span class="hide" data-rule="rangeOverflow">You must choose a number equal to or less than 10</span>
+                            <span id="specialrule" class="hide">You can't transfer to the same ID.</span>
+                        </div>
+                    </div>
+                    <div class="space"> 
+                        <h3>How much do you want transferred?</h3>
+                        <input id="transferamount" type="number" class="unhighlighted"
+                        required
+                        placeholder="Enter the amount to be transferred. (min. 100)"
+                        min="1"
+                        max="">
+                        <div class="validation-messages">
+                            <span data-rule="valueMissing">Transfer amount required</span>
+                            <span class="hide" data-rule="rangeUnderflow">You must choose a number equal to or above 100</span>
+                            <span class="hide" data-rule="rangeOverflow">You must choose a number equal to or less than 1000</span>
+                        </div>
+                    </div>
+                </div>
+                <input id="submit" type="submit" value="Save">
+            </form>
+        </div>
+        <script src="viewcustomers.js"></script>
+    </body>
+</html>

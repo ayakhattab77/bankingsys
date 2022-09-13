@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(181, 173, 213, 0.9) , rgba(181, 173, 213, 0.1));
+    margin: 0px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+nav {
+    flex: 0 0 70px;
+    padding: 10px;
+    background-color: rgb(71, 169, 32, 0.4);
+}
+
+ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+li {
+    list-style-type: none;
+    width: 200px;
+    color: whitesmoke;
+}
+
+a:link {
+    color: rgb(245, 245, 245, 0.8);
+    text-decoration: none;
+}
+
+a:visited {
+    color: whitesmoke;
+}
+
+a:hover{
+    color:white;
+}
+
+a:active {
+    color:goldenrod;
+}
+
+main {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/*
+    orange: rgb(215, 170, 2)
+    violet: rgb(181, 173, 213)
+    green: rgb(71, 169, 32)
+    blue: rgb(1, 131, 252)
+    that other color: rgb(254, 210, 164)
+*/
+
+table {
+    width: 60%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    font-size: 16px;
+    margin: 20px;
+}
+
+table th {
+    font-size: 18px;
+}
+
+table caption {
+    margin: 10px;
+    padding: 10px;
+    color: teal;
+    font-size: 30px;
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+
+table tr {
+    color: rgb(0, 128, 128, 0.8);
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+table th{
+    color: white;
+    background-color: wheat;
+    cursor: default;
+}
+
+table tr:hover {
+    background-color: rgb(254, 210, 164, 0.6);
+}
